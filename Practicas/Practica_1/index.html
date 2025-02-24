@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .titulo{
+            text-align: center;
+            color: red;
+        }
+        img{
+            display: block;
+            margin: auto;
+            max-width: 600px;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: column;
+        }
+        .header1, .cont1, .footer1 {
+            padding: 20px;
+            background: #f1f1f1;
+            margin: 5px;
+        }
+
+        .container2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .item2 {
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        .container3 {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav main aside"
+                "footer footer footer";
+            grid-gap: 10px;
+        }
+        .header { grid-area: header; }
+        .nav { grid-area: nav; }
+        .main { grid-area: main; }
+        .aside { grid-area: aside; }
+        .footer { grid-area: footer; }
+        .item {
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        .container4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .item4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 20px;
+        }
+        .item4:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        .image4, .text4 {
+            flex: 1;
+            max-width: 300px;
+            padding: 20px;
+            background: #f1f1f1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Layout 1</h1>
+    <h2 class="subTitulo">Layout de una columna</h2>
+    <img src="img/layout1.jpg" >
+    <div class="container1">
+        <header class="header1">Encabezado</header>
+        <main class="cont1">Contenido principal</main>
+        <footer class="footer1">Pie de página</footer>
+    </div>
+
+    <h1 class="titulo">Layout 2</h1>
+    <h2>Layout de tres columnas</h2>
+    <img src="img/layout2.jpg">
+    <header>
+        <h1>Encabezado</h1>
+    </header>
+    <div class="container2">
+        <div class="item2">Columna 1</div>
+        <div class="item2">Columna 2</div>
+        <div class="item2">Columna 3</div>
+    </div>
+    <footer>
+        <p>Pie de página</p>
+    </footer>
+
+    <h1 class="titulo">Layout 3</h1>
+    <h2>Layout de tres columnas</h2>
+    <img src="img/layout3.jpg">
+    <div class="container3">
+        <header class="header item">Encabezado</header>
+        <nav class="nav item">Navegación</nav>
+        <main class="main item">Contenido principal</main>
+        <aside class="aside item">Lateral</aside>
+        <footer class="footer item">Pie de página</footer>
+    </div>
+
+    <h1 class="titulo">Layout 4</h1>
+    <h2>Layout de texto e imagen intercalada</h2>
+    <img src="img/layout4.jpg">
+    <div class="container4">
+        <div class="item4">
+            <div class="image4">
+                <img src="img/imglayout4.png" alt="Imagen 1" />
+            </div>
+            <div class="text4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae.</p>
+            </div>
+        </div>
+        <div class="item4">
+            <div class="image4">
+                <img src="img/imglayout4.png" alt="Imagen 2" />
+            </div>
+            <div class="text4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae.</p>
+            </div>
+        </div>
+        <div class="item4">
+            <div class="image4">
+                <img src="img/imglayout4.png" alt="Imagen 3" />
+            </div>
+            <div class="text4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
